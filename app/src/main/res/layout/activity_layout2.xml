@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_wallpaper"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Layout2">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_send"
+        android:scrollbars="vertical"
+        android:id="@+id/rv_msg"
+       >
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:id="@+id/ll_send"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_typemessage"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:inputType="text"
+            android:hint="Type your message here..."
+            android:background="@null"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_sendmessage"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_send_black_24dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
